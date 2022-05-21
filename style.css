@@ -1,0 +1,27 @@
+#header-img {
+    height: auto;
+    width: 200px;
+    border-radius: 50%;
+  }
+  #header{
+    
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  #nav-bar{
+    position: fixed;
+    width: 40%;
+    font-size:24px;
+    display: flex;
+    justify-content: space-around;
+  }
+  #video{
+    margin-right: 20%;
+    margin-left: 30%;
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
