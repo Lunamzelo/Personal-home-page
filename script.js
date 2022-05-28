@@ -1,8 +1,17 @@
-var click_count;
+ function getNumberOrString(value) {
+   // Convert a string value to a number if possible
+   let number_value = Number(value);
+   if (Number.isNaN(number_value)) {
+     return value;
+   } else {
+     return number_value;
+   }
+ }
 
-click_count = 0;
+ document.getElementById("button").addEventListener("click", (event) => {
+   let element_list = document.getElementById("list");
+   let new_li = document.createElement("li");
+   new_li.innerText = getNumberOrString(document.getElementById("text").value);
 
-document.getElementById("button").addEventListener("click", (event) => {
-  click_count = (typeof click_count === "number" ? click_count : 0) + 1;
-  event.target.innerText = click_count;
-});
+   element_list.appendChild(new_li);
+ });
